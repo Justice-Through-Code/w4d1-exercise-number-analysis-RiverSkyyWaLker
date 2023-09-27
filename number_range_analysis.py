@@ -26,6 +26,16 @@ def calculate_sum(start, end):
     # TODO: Implement the logic to calculate the sum of numbers within the range.
     # TODO: Return the calculated sum.
 
+    return sum(range(start, end +1))
+    
+    # Sum function adds up all numbers from beginning to end.
+    x = 0
+    for num in range(start, end +1):
+        x += num
+        print(x)
+    return x
+calculate_sum(1, 10)
+
 def find_smallest_number(start, end):
     """
     Find the smallest number within the specified range.
@@ -40,6 +50,10 @@ def find_smallest_number(start, end):
     # TODO: Implement the logic to find the smallest number within the range.
     # TODO: Return the found smallest number.
 
+    return min(start, end)
+
+    # 'Start' is the smallest number in the range.
+
 def find_largest_number(start, end):
     """
     Find the largest number within the specified range.
@@ -53,6 +67,10 @@ def find_largest_number(start, end):
     """
     # TODO: Implement the logic to find the largest number within the range.
     # TODO: Return the found largest number.
+    
+    return max(start, end)
+
+    # 'End' is the largest number in the range
 
 def count_even_numbers(start, end):
     """
@@ -68,6 +86,19 @@ def count_even_numbers(start, end):
     # TODO: Implement the logic to count even numbers within the range.
     # TODO: Return the count of even numbers.
 
+    return sum(1 for num in range(start, end +1) if num % 2 == 0)
+
+    # Iterate through start to end numbers.
+    # Check if each number is even, using remainder.
+    # Return count for even numbers, counting all even numbers.
+
+    x = 0
+    for num in range(start, end + 1):
+        if num % 2 == 0:
+            x += 1
+            print(x)
+    return x
+
 def count_odd_numbers(start, end):
     """
     Count the number of odd numbers within the specified range.
@@ -81,3 +112,16 @@ def count_odd_numbers(start, end):
     """
     # TODO: Implement the logic to count odd numbers within the range.
     # TODO: Return the count of odd numbers.
+
+    return sum(1 for num in range(start, end + 1) if num % 2 == 1)
+
+    # Iterate through numbers from start to end.
+    # Check if each number is odd, using remainder after division.
+    # Return count for odd numbers, counting odd numbers.
+
+    x = 0
+    for num in range(start, end + 1):
+        if num % 2 != 0:
+            x += 1
+            print(x)
+    return x
